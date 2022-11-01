@@ -23,32 +23,32 @@ const ActorData = () => {
 
   return (
     <div className="main">
-      {console.log(data)}
-      <section className="search-area">
+      <br />
+      <div className="search-area">
         <div className="container-1">
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="input-search"
-            placeholder="Search by Shows name...."
+            placeholder="Search by People name...."
           />
         </div>
-      </section>
-
+      </div>
+      <br />
       <section>
-        <div className="container-2">
-          <div className="inner-content">
+        <div className="container">
+          <div className="row">
             {data.map((element) => {
               return (
-                <div className="top-details">
-                  <div className="card">
+                <div className="col-lg-4 col-md-4 col-sm-4 col-6">
+                  <div className="my-card card bg-light mb-5 rounded">
                     <a href={element.person.url}>
                       {element.person.image ? (
                         <img
                           src={element.person.image.medium}
-                          className="image"
-                          style={{ width: "255px", height: "325px" }}
+                          className="card-image"
+                          style={{ width: "22vw", height: "22vw" }}
                           alt={
                             element.person.name != null
                               ? element.person.name
@@ -58,9 +58,9 @@ const ActorData = () => {
                       ) : (
                         <div>
                           <img
-                            className="image"
+                            className="card-image"
                             src="https://www.prokerala.com/movies/assets/img/no-poster-available.jpg"
-                            style={{ width: "250px", height: "350px" }}
+                            style={{ width: "22vw", height: "22vw" }}
                             alt="Not Found"
                           />
                         </div>
@@ -68,12 +68,14 @@ const ActorData = () => {
                     </a>
                     <div className="card-body">
                       {element.person.birthday ? (
-                        <p>Birthday: {element.person.birthday}</p>
+                        <p className="card-text">
+                          Birthday: {element.person.birthday}
+                        </p>
                       ) : (
-                        <p>Birthday: N/A</p>
+                        <p className="card-text">Birthday: N/A</p>
                       )}
                     </div>
-                    <h5 className="text-danger text-center">
+                    <h5 className="card-title text-center text-primary">
                       {element.person.name}
                     </h5>
                   </div>
