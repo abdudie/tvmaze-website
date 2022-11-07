@@ -13,3 +13,9 @@
 * {
   background-image: linear-gradient(rgba 255, 232, 123, 0.4);
 }
+.bottom-jumbo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://www.media.hw-static.com/media/2022/01/2022-Movie-Posters-web_cropped.jpg);
+  background-size: cover;
+  height: 30vw;
+}

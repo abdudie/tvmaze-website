@@ -24,7 +24,7 @@ const Header = ({ setSearch, search, rV, setRV }) => {
       <div className="main-wrapper">
         <div className="topheader jumbotron">
           <div className="container card flex-row mr-auto">
-            <h1>TV MAZE</h1>
+            <h1 className="h1">TV MAZE</h1>
             <img
               className="card-image"
               style={{ width: "8vw" }}

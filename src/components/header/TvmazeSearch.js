@@ -10,6 +10,8 @@ const TvmazeSearch = ({ search, setSearch, rV, setrV }) => {
     <div className="main">
       {rV === "people" ? <ActorData /> : ""}
       {rV === "shows" ? <ShowsData /> : ""}
+      <br />
+      <div className="bottom-jumbo jumbotron"></div>
     </div>
   );
 };
